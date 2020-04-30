@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="TestApp.Views.SensorPage">
+
+    <ContentPage.Content>
+        <StackLayout
+            Padding="10">
+            <ScrollView>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Id"
+                        VerticalOptions="Center" />
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Placeholder="Introduce el Id..."
+                        Text="{Binding Sensor.Id}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Nombre"
+                        VerticalOptions="Center" />
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Placeholder="Introduce el nombre..."
+                        Text="{Binding Sensor.Name}" />
+                </Grid>
+            </ScrollView>
+            <Button
+                Command="{Binding UpdateCommand}"
+                Text="Update"
+                VerticalOptions="StartAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
