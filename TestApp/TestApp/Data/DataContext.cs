@@ -9,7 +9,7 @@ namespace MQTTprism.Data
 	{
 		public DataContext() : base()
 		{
-			Database.EnsureDeleted();
+			//Database.EnsureDeleted();
 			Database.EnsureCreated();
 		}
 
